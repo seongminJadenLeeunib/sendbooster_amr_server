@@ -102,6 +102,7 @@ The robot's position is calculated based on the encoder values. The robot's x, y
 1.1 Distance Calculation
 
 The RPM (Revolutions Per Minute) of the motors is used to calculate the number of wheel rotations, and this is then multiplied by the wheel's circumference to compute the distance traveled.
+
     Distance=RPM×Gear Ratio×2π×Wheel Radius×Δt
     Distance=RPM×Gear Ratio×2π×Wheel Radius×Δt
 
@@ -123,8 +124,8 @@ The robot's new position (x, y) and orientation angle θ are updated using the d
 
     Angular Velocity: The difference in the distances traveled by the two wheels is used to calculate the angular velocity.
 
-Angular Velocity=right_distance−left_distanceWheelbase
-Angular Velocity=Wheelbaseright_distance−left_distance​
+    Angular Velocity=right_distance−left_distanceWheelbase
+    Angular Velocity=Wheelbaseright_distance−left_distance​
 
     Position Update (x, y): The robot's new position (x, y) is updated using the linear velocity and angular velocity.
     
