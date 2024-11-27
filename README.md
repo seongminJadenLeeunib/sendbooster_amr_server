@@ -147,6 +147,7 @@ Linear velocity is calculated as the average of the distances traveled by both w
     Linear Velocity=2left_distance+right_distance​
 
 Where left_distance and right_distance are the distances traveled by the left and right wheels, respectively.
+
 2.2 Angular Velocity
 
 Angular velocity is calculated based on the difference in the distances traveled by the two wheels. The higher the angular velocity, the more the robot rotates.
