@@ -96,6 +96,68 @@ File Details
     sendbooster_server/sendbooster_JointStatePublisher.py: Publishes joint states to the /joint_states topic.
     urdf/amr.urdf: Describes the robot's physical structure for simulation and visualization.
 
+Position Calculation
+
+The robot's position is calculated based on the encoder values. The robot's x, y coordinates and θ (orientation angle) are updated based on the distance traveled by the two motors.
+1.1 Distance Calculation
+
+The RPM (Revolutions Per Minute) of the motors is used to calculate the number of wheel rotations, and this is then multiplied by the wheel's circumference to compute the distance traveled.
+    Distance=RPM×Gear Ratio×2π×Wheel Radius×Δt
+    Distance=RPM×Gear Ratio×2π×Wheel Radius×Δt
+
+Where:
+
+    RPM is the motor's revolutions per minute.
+    Gear Ratio is the ratio between motor rotations and wheel rotations (e.g., 1:10).
+    Wheel Radius is the radius of the robot's wheel.
+    ΔtΔt is the time interval (in seconds).
+
+1.2 Position Update
+
+The robot's new position (x, y) and orientation angle θ are updated using the distances traveled by the left and right wheels, left_distance and right_distance.
+
+    Linear Velocity: The average distance traveled by both wheels is used to calculate the linear velocity.
+
+    Linear Velocity=left_distance+right_distance2
+    Linear Velocity=2left_distance+right_distance​
+
+    Angular Velocity: The difference in the distances traveled by the two wheels is used to calculate the angular velocity.
+
+Angular Velocity=right_distance−left_distanceWheelbase
+Angular Velocity=Wheelbaseright_distance−left_distance​
+
+    Position Update (x, y): The robot's new position (x, y) is updated using the linear velocity and angular velocity.
+    
+    xnew=xold+Linear Velocity×cos⁡(θ)×Δt
+    xnew​=xold​+Linear Velocity×cos(θ)×Δt
+    ynew=yold+Linear Velocity×sin⁡(θ)×Δt
+    ynew​=yold​+Linear Velocity×sin(θ)×Δt
+
+    Orientation Update (θ):
+
+    θnew=θold+Angular Velocity×Δt
+    θnew​=θold​+Angular Velocity×Δt
+2. Velocity Calculation
+
+The robot's linear velocity and angular velocity are calculated from the RPM values of the two wheels.
+2.1 Linear Velocity
+
+Linear velocity is calculated as the average of the distances traveled by both wheels.
+Linear Velocity=left_distance+right_distance2
+Linear Velocity=2left_distance+right_distance​
+
+Where left_distance and right_distance are the distances traveled by the left and right wheels, respectively.
+2.2 Angular Velocity
+
+Angular velocity is calculated based on the difference in the distances traveled by the two wheels. The higher the angular velocity, the more the robot rotates.
+Angular Velocity=right_distance−left_distanced
+Angular Velocity=dright_distance−left_distance​
+
+Where d is the distance between the two wheels (e.g., 0.6m).
+
+This explanation and these formulas help to understand how the robot's position and velocity are calculated based on the encoder values and wheel rotations. These calculations are used for updating the robot's odometry and controlling its movement.
+
+
 License
 
 This package is licensed under the terms specified in the LICENSE file.
