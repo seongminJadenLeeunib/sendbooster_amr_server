@@ -41,10 +41,10 @@ Features
 
 Installation
 
-    Clone the repository into your ROS 2 workspace:
+Clone the repository into your ROS 2 workspace:
 
-cd ~/ros2_ws/src
-git clone <repository_url> sendbooster_server
+    cd ~/ros2_ws/src
+    git clone <repository_url> sendbooster_server
 
 Build the workspace:
 
