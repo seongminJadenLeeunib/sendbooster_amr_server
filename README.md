@@ -48,8 +48,8 @@ Clone the repository into your ROS 2 workspace:
 
 Build the workspace:
 
-cd ~/ros2_ws
-colcon build
+    cd ~/ros2_ws
+    colcon build
 
 Source the workspace:
 
