@@ -34,7 +34,8 @@ Topics
 Published Topics
 
 This topic publishes the current state of the motors.
-    /motor_status
+    "/motor_status"
+    
     Data Structure:
         data[0]: Motor 1 speed (in RPM)
         data[1]: Motor 1 status (e.g., error codes or operational state)
