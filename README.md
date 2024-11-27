@@ -60,22 +60,8 @@ Launching the Server
 
 Use the provided launch file to start the sendbooster_server package:
 
-ros2 launch sendbooster_server sendbooster_server.launch.py
+    ros2 launch sendbooster_server sendbooster_server.launch.py
 
-Custom Message
-
-The HeaderedTwist.msg defines the following structure:
-
-std_msgs/Header header
-geometry_msgs/Twist twist
-
-This allows for transmitting twist messages with additional metadata.
-Testing
-
-Run the included tests to ensure code quality:
-
-colcon test
-colcon test-result
 
 File Details
 
