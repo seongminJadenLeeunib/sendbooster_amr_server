@@ -68,7 +68,7 @@ Installation
 Clone the repository into your ROS 2 workspace:
 
     cd ~/ros2_ws/src
-    git clone <repository_url> sendbooster_server
+    git clone [<repository_url>](https://github.com/seongminJadenLeeunib/sendbooster_amr_server.git) sendbooster_server
 
 Build the workspace:
 
