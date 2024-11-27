@@ -30,6 +30,30 @@ The directory structure of the sendbooster_server package is as follows:
     └── urdf
         └── amr.urdf                        # URDF file describing the robot model
 
+Topics
+Published Topics
+    /motor_status
+
+This topic publishes the current state of the motors.
+
+    Data Structure:
+        data[0]: Motor 1 speed (in RPM)
+        data[1]: Motor 1 status (e.g., error codes or operational state)
+        data[2]: Motor 1 encoder value (1 full rotation = 30 counts)
+        data[3]: Motor 2 speed (in RPM)
+        data[4]: Motor 2 status
+        data[5]: Motor 2 encoder value (1 full rotation = 30 counts)
+
+    Notes:
+        Motor rotation direction:
+            Clockwise (CW): Positive values
+            Counterclockwise (CCW): Negative values
+
+Subscribed Topics
+
+The package does not currently subscribe to any topics, but it can be extended as needed.
+
+
 Features
 
     Odometry Publishing: Calculates and publishes odometry data using the sendbooster_odom.py script.
