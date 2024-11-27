@@ -6,29 +6,29 @@ Package Structure
 
 The directory structure of the sendbooster_server package is as follows:
 
-.
-├── config
-│   └── sendbooster.lua                 # Configuration file for Lua-based setup
-├── launch
-│   └── sendbooster_server.launch.py    # Main launch file for the package
-├── LICENSE                             # License file
-├── msg
-│   └── HeaderedTwist.msg               # Custom message definition
-├── package.xml                         # Package metadata and dependencies
-├── resource
-│   └── sendbooster_server              # Resource marker for package identification
-├── sendbooster_server
-│   ├── __init__.py                     # Init file for Python module
-│   ├── sendbooster_JointStatePublisher.py  # Publishes joint states of the robot
-│   └── sendbooster_odom.py             # Calculates and publishes odometry
-├── setup.cfg                           # Configuration for Python packaging
-├── setup.py                            # Build and install script
-├── test
-│   ├── test_copyright.py               # Copyright compliance tests
-│   ├── test_flake8.py                  # Linting tests using flake8
-│   └── test_pep257.py                  # Docstring compliance tests
-└── urdf
-    └── amr.urdf                        # URDF file describing the robot model
+    .
+    ├── config
+    │   └── sendbooster.lua                 # Configuration file for Lua-based setup
+    ├── launch
+    │   └── sendbooster_server.launch.py    # Main launch file for the package
+    ├── LICENSE                             # License file
+    ├── msg
+    │   └── HeaderedTwist.msg               # Custom message definition
+    ├── package.xml                         # Package metadata and dependencies
+    ├── resource
+    │   └── sendbooster_server              # Resource marker for package identification
+    ├── sendbooster_server
+    │   ├── __init__.py                     # Init file for Python module
+    │   ├── sendbooster_JointStatePublisher.py  # Publishes joint states of the robot
+    │   └── sendbooster_odom.py             # Calculates and publishes odometry
+    ├── setup.cfg                           # Configuration for Python packaging
+    ├── setup.py                            # Build and install script
+    ├── test
+    │   ├── test_copyright.py               # Copyright compliance tests
+    │   ├── test_flake8.py                  # Linting tests using flake8
+    │   └── test_pep257.py                  # Docstring compliance tests
+    └── urdf
+        └── amr.urdf                        # URDF file describing the robot model
 
 Features
 
@@ -82,5 +82,5 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 For questions or feature requests, open an issue in the repository.
 Maintainer
 
-    Name: [Your Name or Organization]
-    Contact: [Your Email or Website]
+    Name: seongmin Jaden Lee
+    Contact: roboticsmaster@naver.com / seongmin@unib.kr
