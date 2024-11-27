@@ -143,6 +143,7 @@ The robot's linear velocity and angular velocity are calculated from the RPM val
 2.1 Linear Velocity
 
 Linear velocity is calculated as the average of the distances traveled by both wheels.
+
     Linear Velocity=left_distance+right_distance2
     Linear Velocity=2left_distance+right_distance​
 
@@ -151,8 +152,10 @@ Where left_distance and right_distance are the distances traveled by the left an
 2.2 Angular Velocity
 
 Angular velocity is calculated based on the difference in the distances traveled by the two wheels. The higher the angular velocity, the more the robot rotates.
+
     Angular Velocity=right_distance−left_distanced
     Angular Velocity=dright_distance−left_distance​
+
 Where d is the distance between the two wheels (e.g., 0.6m).
 
 This explanation and these formulas help to understand how the robot's position and velocity are calculated based on the encoder values and wheel rotations. These calculations are used for updating the robot's odometry and controlling its movement.
